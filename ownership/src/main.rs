@@ -9,7 +9,9 @@ fn main() {
         length: 9.0,
         width: 7.0,
     };
-    
+
+    let result_perimeter = perimeter(rect.clone());
+    println!("Le périmètre du rectangle est: {}", result_perimeter);
     let result_perimeter = perimeter(rect.clone());
     println!("Le périmètre du rectangle est: {}", result_perimeter);
 }
@@ -22,6 +24,7 @@ fn average(premierfloat: f64, secondfloat: f64) -> f64 {
 
 //Definissez la structure suivante
 #[derive(Clone)]
+#[derive(Copy)]
 struct Rectangle {
     length : f64,
     width : f64,
