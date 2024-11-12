@@ -5,8 +5,9 @@ fn main() {
     convert_to_int1(string1);
     convert_to_int1(string2);
 
-    convert_to_int2(string1);
-    convert_to_int2(string2);
+   
+    convert_to_int3(string1);
+    convert_to_int3(string2);
 }
 
 fn convert_to_int1(chaine: &str) -> i32 {
@@ -32,3 +33,10 @@ fn convert_to_int2(chaine: &str) -> i32 {
     nombre
 }
 
+//fonction convert_to_int3 qui prend en argument une reference vers une chaine et qui renvoie son entier et renvoi un resultat de type anyhow::Result<> si ca reussi on affiche le carre sinon on propage l'erreur par ?
+fn convert_to_int3(chaine: &str) -> anyhow::Result<i32> {
+    // Convertir la chaîne en entier
+    let nombre = chaine.parse::<i32>()?;
+    println!("Le carré de {} est {}", nombre, nombre * nombre);
+    Ok(nombre)
+}
