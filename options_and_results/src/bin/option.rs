@@ -3,18 +3,33 @@ fn main() {
     let string2 = "";
     
     print_first_word1(string1);
+    print_first_word1(string2);
+    print_first_word2(string1);
+    print_first_word2(string2);
+    
 }
 
 //fonction qui prend en argument une ref vers une chaine et qui affiche son premier mot sous la forme suivante
-fn print_first_word1(phrase: &str) {
+fn print_first_word1(string: &str) {    
     // Diviser la chaîne en mots et récupérer le premier
-    match phrase.split_whitespace().next() {
+    match string.split_whitespace().next() {
         Some(premier_mot) => println!("Premier mot: {}", premier_mot),
         None => println!("La chaîne est vide ou ne contient pas de mots."),
     }
 }
 
+//fonction print_first_word2 qui prend en argument une reference vers une chaine et qui renvoie son premier mot ou panique si il n'y en a pas
 
+fn print_first_word2(string: &str) {
+    // Séparer la chaîne en mots et prendre le premier mot, s'il y en a un
+    // Diviser la chaîne en mots et récupérer le premier avec `.expect()`
+    let premier_mot = string
+        .split_whitespace()
+        .next()
+        .expect("La chaîne est vide ou ne contient pas de mots.");
+
+    println!("Premier mot: {}", premier_mot);
+}
 
 
 
