@@ -4,10 +4,9 @@ fn main() {
 
     convert_to_int1(string1);
     convert_to_int1(string2);
-
-   
+    
     convert_to_int3(string1);
-    convert_to_int3(string2);
+    convert_to_int3(string2); 
 }
 
 fn convert_to_int1(chaine: &str) -> i32 {

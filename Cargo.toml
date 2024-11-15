@@ -2,5 +2,5 @@
 
 resolver = "2"
 
-members = [ "options_and_results", "ownership",
+members = [ "concurrency", "options_and_results", "ownership",
 ]
