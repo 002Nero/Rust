@@ -8,6 +8,10 @@
       <sourceFolder url="file://$MODULE_DIR$/port_scanner/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/network_services/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/exquisite_corpse/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/R4.01-voting-machine/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/R401-voting-machine/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/R401-voting-machine/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/v010_spaghetti/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />

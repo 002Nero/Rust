@@ -2,5 +2,5 @@
 
 resolver = "2"
 
-members = [ "concurrency", "exquisite_corpse", "network_services", "options_and_results", "ownership", "port_scanner", "rustlings",
+members = [ "R401-voting-machine", "concurrency", "exquisite_corpse", "network_services", "options_and_results", "ownership", "port_scanner", "rustlings", "v010_spaghetti",
 ]
