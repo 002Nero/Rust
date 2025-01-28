@@ -1,0 +1,8 @@
+[package]
+name = "v020_configuration"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.0.0", features = ["rt", "rt-multi-thread", "macros"] }
+clap = { version = "3.0.0-beta.2", features = ["derive"] }

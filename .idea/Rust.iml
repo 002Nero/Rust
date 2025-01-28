@@ -12,6 +12,8 @@
       <sourceFolder url="file://$MODULE_DIR$/R401-voting-machine/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/R401-voting-machine/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/v010_spaghetti/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/v020_configuration/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/v020_configuration/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
