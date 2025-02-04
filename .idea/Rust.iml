@@ -18,6 +18,10 @@
       <sourceFolder url="file://$MODULE_DIR$/v021_app_builder/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/v030_domain/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/v030_domain/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/v040_memory/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/v040_memory/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/v041_file/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/v041_file/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
