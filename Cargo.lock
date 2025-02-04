@@ -703,6 +703,7 @@ dependencies = [
  "anyhow",
  "async-trait",
  "clap 3.2.25",
+ "serde",
  "serde_json",
  "tokio",
 ]

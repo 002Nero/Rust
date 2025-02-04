@@ -1,15 +1,32 @@
+use std::collections::HashSet;
+use std::iter::Map;
 use async_trait::async_trait;
 use anyhow::Result;
-use crate::domain::VotingMachine;
+use crate::domain::{Scoreboard, VotingMachine};
 use crate::storage::Storage;
 use tokio::fs;
 use tokio::io::AsyncWriteExt;
+use serde::{Serialize, Deserialize};
+
+#[derive(Serialize, Deserialize)]
+struct ScoreboardDao {
+    scores: Map<String, usize>,
+    blank_votes: usize,
+    invalid_votes: usize,
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct VotingMachineDao {
+    pub voters: HashSet<String>,
+    scoreboard: ScoreboardDao,
+}
 
 pub struct FileStore {
     filepath: String,
 }
 
 const FILEPATH: &str = "machine.json";
+
 impl FileStore {
     pub async fn create(machine: VotingMachine, filepath: &str) -> Result<Self> {
         let mut store = FileStore {
