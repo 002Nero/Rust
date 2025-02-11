@@ -2,7 +2,7 @@ use async_trait::async_trait;
 use anyhow::Result;
 use crate::domain::VotingMachine;
 use crate::storage::Storage;
-struct MemoryStore {
+pub(crate) struct MemoryStore {
     voting_machine: VotingMachine,
 }
 

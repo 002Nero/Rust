@@ -1,5 +1,5 @@
 [package]
-name = "v040_memory"
+name = "v050_use_cases"
 version = "0.1.0"
 edition = "2021"
 
@@ -8,4 +8,5 @@ tokio = { version = "1.0.0", features = ["rt", "rt-multi-thread", "macros"] }
 clap = { version = "3.0.0-beta.2", features = ["derive"] }
 anyhow = "1.0"
 async-trait = "0.1.86"
+serde_json = "1.0.138"
 serde = { version = "1.0.217", features = ["derive"] }

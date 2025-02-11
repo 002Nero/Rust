@@ -1,33 +1,42 @@
 use std::collections::BTreeMap as Map;
 use std::collections::BTreeSet as Set;
+use serde::Serialize;
 
+#[derive(Serialize, Debug, Clone, PartialEq, Eq, PartialOrd, Ord)]
 pub struct Voter(pub String);
 
+#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord)]
 pub struct Candidate(pub String);
 
+#[derive(Debug, Clone)]
 pub struct Score(pub usize);
 
+#[derive(Debug, Clone)]
 pub struct AttendenceSheet(pub Set<Voter>);
 
-pub struct Scoreboard{
+#[derive(Debug, Clone)]
+pub struct Scoreboard {
     pub scores: Map<Candidate, Score>,
     pub blank_score: Score,
     pub invalid_score: Score,
 }
 
-pub struct BallotPaper{
+#[derive(Debug, Clone)]
+pub struct BallotPaper {
     pub voter: Voter,
-    pub candidate: Option<Candidate>
+    pub candidate: Option<Candidate>,
 }
 
-pub enum VoteOutcome{
+#[derive(Debug, Clone)]
+pub enum VoteOutcome {
     AcceptedVote(Voter, Candidate),
     BlankVote(Voter),
     InvalidVote(Voter),
     HasAlreadyVoted(Voter),
 }
 
-pub struct VotingMachine{
+#[derive(Debug, Clone)]
+pub struct VotingMachine {
     voters: AttendenceSheet,
     scoreboard: Scoreboard,
 }
@@ -49,9 +58,7 @@ impl VotingMachine {
             scoreboard: Scoreboard::new(),
         }
     }
-}
 
-impl VotingMachine {
     pub fn vote(&mut self, ballot: BallotPaper) -> VoteOutcome {
         if self.voters.0.contains(&ballot.voter) {
             return VoteOutcome::HasAlreadyVoted(ballot.voter);
@@ -71,14 +78,12 @@ impl VotingMachine {
             }
         }
     }
-}
 
-impl VotingMachine{
-    pub fn get_scoreboard(&self) -> &Scoreboard{
+    pub fn get_scoreboard(&self) -> &Scoreboard {
         &self.scoreboard
-
     }
-    pub fn get_voters(&self) -> &AttendenceSheet{
+
+    pub fn get_voters(&self) -> &AttendenceSheet {
         &self.voters
     }
 }

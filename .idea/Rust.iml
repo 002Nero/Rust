@@ -22,6 +22,8 @@
       <sourceFolder url="file://$MODULE_DIR$/v040_memory/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/v041_file/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/v041_file/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/v050_use_cases/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/v050_use_cases/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
